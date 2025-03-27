@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloths</title>
+
+    <link rel="shortcut icon" href="favicon/shirt-solid-branca.svg" type="image/x-icon">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo_nome" href="index.html">
+                Cloths
+            </a>
+            <div class="categorias">
+                Categorias <i class="fa-solid fa-caret-down"></i>
+                <div class="dropdown_categorias">
+                    <div href="#" class="item_categorias">Camisetas</div>
+                    <div href="#" class="item_categorias">Calças</div>
+                    <div href="#" class="item_categorias">Acessórios</div>
+                    <div href="#" class="item_categorias">Meias</div>
+                    <div href="#" class="item_categorias">Cuecas</div>
+                </div>
+            </div>
+            <input class="input_navbar input" placeholder="Digite uma peça de roupa ou estilo"
+                type="text">
+            <div class="container_icones_navbar">
+                <a class="icone-usuario" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
+                        class="fa-solid fa-user"></i></a>
+                <a href="carrinho.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- MODAL LOGIN USUARIO -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel"><i class="fa-solid fa-user"></i> Entrar
+                        </h1>
+                        <button type="button" class="btn btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="">Login</label>
+                        <input type="text">
+                        <label for="">Senha</label>
+                        <input type="password">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Entrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM LOGIN USUARIO -->
+
+        <div class="container_global container1">
+            <div class="c1div1"><img src="imagens/imagem banner c1div1.jpg" alt=""></div>
+            <div class="c1div2">Entregas para todo o Brasil<i class="fa-solid fa-truck-fast"></i></div>
+            <div class="c1div3">30 dias de garantia<i class="fa-solid fa-award"></i></div>
+            <div class="c1div4">Baixe nosso App<i class="fa-solid fa-qrcode"></i></div>
+        </div>
+        <h4 class="titulo-estilos">Estilos</h4>
+
+        <div class="container-cards">
+            <div class="card">
+                <img src="imagens/itens_carrossel/206348976-1-watercolourfloral.avif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Verão</p>
+                    <button type="button" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Adicionar ao carrinho">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/itens_carrossel/207485172-1-black.avif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Inverno</p>
+                    <button type="button" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Adicionar ao carrinho">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/itens_carrossel/207600084-1-floralprint.avif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Ousadas</p>
+                    <button type="button" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Adicionar ao carrinho">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/itens_carrossel/207667543-1-oatmeal.avif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Aesthetic</p>
+                    <button type="button" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Adicionar ao carrinho">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/itens_carrossel/207745447-1-stone.avif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Dia-a-dia</p>
+                    <button type="button" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Adicionar ao carrinho">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/itens_carrossel/207752510-1-chocolate.avif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Ocasiões especiais</p>
+                    <button type="button" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Adicionar ao carrinho">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------- FIM CARROSSEL ------------- -->
+
+        <!-- CONTAINER 2 -->
+        <div class="container_global container2">
+            <div class="c2div1">
+                Tendências
+            </div>
+            <div class="c2div2">
+                Monte o seu look
+            </div>
+
+            <div class="c2div3">
+                <img src="imagens/print_video.png" alt="print do video">
+                <i class="fa-solid fa-arrow-pointer"></i>
+                <video autoplay loop muted>
+                    <source src="videos/3888261-hd_1080_2048_25fps.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="c2div4">
+                <q>A verdadeira beleza vem da confiança</q>
+            </div>
+
+            <!-- --------------- TESTIMONIAL ------------- -->
+            <div class="c2div5">
+                <section class="testimonial">
+                    <div class="rounded-container-img"></div>
+                    <div class="name-testimonial">
+                        <h5>Ammy Rhodes</h5>
+                        <q>Gostei MUITO dos produtos! São muito confortávels!</q>
+                    </div>
+                </section>
+            </div>
+
+            <div class="c2div6">
+                <section class="testimonial">
+                    <div class="rounded-container-img"></div>
+                    <div class="name-testimonial">
+                        <h5>Ginna Carla</h5>
+                        <q>O estado que os produtos chegam é IMPECÁVEL!</q>
+                    </div>
+                </section>
+            </div>
+            <!-- FIM TESTIMONIAL -->
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>(43) 99999-9999</p>
+        <p>&#xa9;Cloths Store</p>
+        <div class="container_items_footer">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+    <!-- FIM RODAPÉ -->
+
+    <!-- Whatsapp flutuante -->
+    <div class="container_whatsapp">
+        <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <!-- ---------------- JAVASCRIPT --------------------->
+
+    <!-- script para botão do whatsapp -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const whatsappButton = document.querySelector(".container_whatsapp");
+            const footer = document.querySelector("footer");
+
+            function ajustarPosicao() {
+                let footerTop = footer.getBoundingClientRect().top;
+                let windowHeight = window.innerHeight;
+
+                if (footerTop < windowHeight) {
+                    whatsappButton.style.bottom = `${windowHeight - footerTop + 20}px`;
+                } else {
+                    whatsappButton.style.bottom = "20px";
+                }
+            }
+
+            window.addEventListener("scroll", ajustarPosicao);
+            ajustarPosicao();
+        });
+    </script>
+
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

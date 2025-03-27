@@ -1,0 +1,754 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: Circular Std;
+    src: url(font-family/circular-std-medium-500.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Circular Std";
+}
+
+/* ----------------- HEADER ----------------- */
+header {
+    display: flex;
+    background-color: rgb(65, 65, 65);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 690px) {
+    .logo_nome {
+        font-size: 160% !important;
+    }
+
+    .categorias {
+        font-size: 15px;
+    }
+
+    .container_icones_navbar i {
+        font-size: 20px !important;
+    }
+
+    .categorias {
+        min-width: 100px;
+    }
+
+    .input_navbar {
+        height: 25px !important;
+    }
+}
+
+.navbar {
+    display: flex;
+    background-color: rgb(65, 65, 65);
+    height: 60px;
+    width: max-content;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.navbar a {
+    text-decoration: none;
+    transition: opacity .2s ease-in-out;
+}
+
+.navbar a:hover {
+    opacity: 70%;
+}
+
+.logo_nome {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.logo_nome:hover {
+    color: white;
+    opacity: 70%;
+}
+
+.categorias {
+    position: relative;
+    /* para alinhar corretamente o dropdown */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.categorias .fa-caret-down {
+    font-size: 10px;
+}
+
+.dropdown_categorias {
+    position: absolute;
+    top: 100%;
+    /* posiciona logo abaixo do botão */
+    left: 0;
+    background-color: rgb(65, 65, 65);
+    border-radius: 5px;
+    padding: 10px 0;
+    color: white;
+    min-width: 110px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .3s ease, transform .3s ease;
+}
+
+.categorias:hover .dropdown_categorias,
+.dropdown_categorias:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.item_categorias {
+    display: block;
+    color: white;
+    padding: 8px 10px;
+    text-decoration: none;
+    transition: background .3s;
+}
+
+.item_categorias:hover {
+    background-color: rgb(90, 90, 90);
+}
+
+.dropdown_categorias div {
+    padding: 4px 7px;
+    text-align: left;
+    transition: opacity .2s ease-in-out;
+}
+
+.dropdown_categorias div:hover {
+    opacity: 70%;
+}
+
+.container_icones_navbar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.navbar .icone-usuario:hover {
+    cursor: pointer;
+}
+
+.navbar i {
+    font-size: 25px;
+    color: white;
+}
+
+.input_navbar {
+    height: 35px;
+    padding: 0 10px;
+    width: 30vw;
+    border-radius: 40px;
+    border: solid 0px black;
+    font-size: 14px;
+}
+
+/* ------ FIM HEADER ------- */
+
+/* OVERLAY LOGIN USUARIO */
+
+@media (max-width: 1000px) {
+    .modal-content {
+        width: 50vw !important;
+    }
+}
+
+.modal-header {
+    background-color: rgb(65, 65, 65);
+    color: white;
+}
+
+.modal-body {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 30vw;
+    height: 400px;
+}
+
+.modal-dialog {
+    justify-content: center;
+}
+
+/* FIM OVERLAY LOGIN DE USUARIO */
+
+/* CARRINHO DE COMPRAS */
+.titulo-carrinho-compras {
+    text-align: center;
+}
+
+@media (min-width: 1025px) {
+    .h-custom {
+        height: 100vh !important;
+    }
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+/* FIM CARRINHO DE COMPRAS */
+
+/* ----------------- MAIN ----------------- */
+main {
+    margin: 0 7vw;
+}
+
+.container_global {
+    margin: 50px 0;
+    gap: 20px;
+}
+
+.container_global div {
+    display: flex;
+}
+
+/* CONTAINER 1 */
+.container1 {
+    display: grid;
+    grid-template: repeat(3, 150px) / 1fr 0.3fr;
+}
+
+.c1div1 {
+    grid-row: 1 / 4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.c1div1 img {
+
+
+    transition: scale .3s ease-in-out;
+}
+
+.c1div1:hover img {
+    scale: 1.01;
+}
+
+.c1div1 img {
+    object-fit: cover;
+    object-position: 50% 10%;
+    width: 100%;
+}
+
+.c1div2,
+.c1div3,
+.c1div4 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #292929;
+    font-size: 120%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.425);
+}
+
+.c1div2 {
+    background-color: #e2c2aa;
+}
+
+.c1div3 {
+    background-color: #e2c2aa;
+}
+
+.c1div4 {
+    background-color: #e2c2aa;
+}
+
+.c1div2 i,
+.c1div3 i,
+.c1div4 i {
+    font-size: 25px;
+}
+
+/* responsividade container 1 */
+@media (max-width: 930px) {
+    .container1 {
+        grid-template: 35vw 20vw / 1fr 1fr 1fr;
+    }
+
+    .c1div1 {
+        grid-column: 1 / 4;
+    }
+
+    .c1div2 {
+        grid-column: 1 / 2;
+    }
+
+    .c1div2,
+    .c1div3,
+    .c1div4 {
+        padding: 15px;
+        font-size: 2.7vw;
+    }
+
+    .c1div2 i,
+    .c1div3 i,
+    .c1div4 i {
+        font-size: 3.3vw;
+    }
+}
+
+/* FIM CONTAINER 1 */
+
+/* --------------- CARROSSEL -------------*/
+.titulo-estilos {
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.img-wrapper {
+    max-width: 100%;
+    height: 92vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+@media screen and (min-width:576px) {
+
+    /* telas grandes  */
+    .carousel-inner {
+        display: flex;
+    }
+
+    .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/6);
+    }
+
+    .img-wrapper {
+        height: 37vw;
+    }
+}
+
+.carousel-inner {
+    padding: 1em;
+}
+
+/* PSEUDO CARROSSEL (temporário)*/
+.container-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: .5em;
+}
+
+@media (max-width: 1100px) {
+    .container-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 930px) {
+    .container-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-body p {
+    font-size: 100%;
+}
+
+.card {
+    transition: scale .3s ease-in;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.24);
+}
+
+.card:hover {
+    cursor: pointer;
+    scale: 1.02;
+}
+
+/* --------------FIM CARROSSEL ------------- */
+
+/* CONTAINER 2 */
+.container2 {
+    display: grid;
+    grid-template: 200px 500px 200px / repeat(3, 1fr);
+}
+
+/* Responsividade container 2 */
+@media (max-width: 980px) {
+    .container2 {
+        grid-template: 150px 500px 150px 150px / repeat(2, 1fr);
+    }
+
+    .c2div1 {
+        grid-column: 1 / 2;
+        font-size: 1.3em !important;
+    }
+
+    .c2div2 {
+        grid-column: 2 / 3;
+        font-size: 1.3em !important;
+    }
+
+    .c2div3 {
+        grid-row: 2 / 3 !important;
+        grid-column: 1 / 3 !important;
+    }
+
+    /* responsividade testimonial */
+    .testimonial .name-testimonial q {
+        font-size: 0.7em !important;
+    }
+
+    .testimonial .name-testimonial h5 {
+        font-size: 1em;
+        margin-bottom: 2px;
+    }
+}
+
+.container {
+    overflow: hidden;
+}
+
+.c2div1 {
+    background-image: url('imagens/tendencias.jpg');
+    /* Define a imagem de fundo */
+    background-size: cover;
+    /* Faz a imagem cobrir toda a área */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem se repita */
+    width: 100%;
+    /* Ajuste conforme necessário */
+    display: flex;
+    /* Usa flexbox para centralizar o texto */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    text-align: center;
+    color: white;
+    /* Cor do texto para contraste */
+    font-size: 24px;
+    /* Tamanho do texto */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Adiciona um efeito de sombra ao texto */
+    transition: transform .3s ease-in-out, font-size .3s ease-in-out;
+}
+
+.c2div2 {
+    background-image: url('imagens/monte\ seu\ look.jpg');
+    /* Define a imagem de fundo */
+    background-size: cover;
+    /* Faz a imagem cobrir toda a área */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem se repita */
+    width: 100%;
+    /* Ajuste conforme necessário */
+    display: flex;
+    /* Usa flexbox para centralizar o texto */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    text-align: center;
+    color: white;
+    /* Cor do texto para contraste */
+    font-size: 24px;
+    /* Tamanho do texto */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Adiciona um efeito de sombra ao texto */
+    transition: transform .5s ease-in-out, font-size .5s ease-in-out;
+}
+
+.c2div1:hover,
+.c2div2:hover {
+    transform: scale(1.01);
+    font-size: 25px;
+}
+
+/* Criando o efeito de escurecimento no hover */
+.c2div1::before,
+.c2div2::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    /* Começa transparente */
+    transition: background 0.3s ease-in-out;
+}
+
+.c2div1:hover::before,
+.c2div2:hover::before {
+    background: rgba(0, 0, 0, 0.3);
+    /* Aparece a camada escura */
+}
+
+.c2div3 {
+    grid-column-start: 3;
+    grid-row: 1 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.c2div3 img {
+    position: absolute;
+    object-fit: cover;
+    z-index: 9;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    transition: visibility .25s ease-in-out, opacity .3s ease-in-out;
+}
+
+.c2div3 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.c2div3 .fa-arrow-pointer {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    z-index: 10;
+    transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+    opacity: 50%;
+}
+
+.c2div3:hover img,
+.c2div3:hover i {
+    opacity: 0%;
+    visibility: hidden;
+}
+
+.c2div4 {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cea98f;
+    background: url(imagens/imagem\ c2div3.webp);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.c2div4 q {
+    text-align: center;
+    padding: 15px;
+    font-size: 120%;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.5px 0.5px 2px black;
+}
+
+.c2div5 {
+    background-color: #e2c2aa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c2div6 {
+    background-color: #e2c2aa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------- TESTIMONIAL ----------------- */
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.623);
+    width: 95%;
+    height: 90%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.555);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 2vw;
+    transition: scale .3s ease-in-out;
+}
+
+.testimonial:hover {
+    scale: 1.01;
+}
+
+.testimonial p,
+q,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.testimonial h5 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.testimonial .name-testimonial q {
+    font-size: 0.9em;
+}
+
+.testimonial q,
+p {
+    font-size: 0.9vw;
+    color: rgb(54, 54, 54);
+}
+
+.name-testimonial {
+    display: flex;
+    flex-direction: column;
+}
+
+.c2div5 .rounded-container-img {
+    background: url(imagens/testimonial/model-testimonial-1.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    min-width: 8vw;
+    min-height: 8vw;
+    border-radius: 50%;
+}
+
+.c2div6 .rounded-container-img {
+    background: url(imagens/testimonial/model-testimonial-2.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 8vw;
+    min-height: 8vw;
+    border-radius: 50%;
+}
+
+/* ----------------- FIM TESTIMONIAL ------------- */
+
+/* ----------------- FOOTER ----------------- */
+footer {
+    display: flex;
+    height: 80px;
+    background-color: rgb(65, 65, 65);
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 650px) {
+
+    footer p,
+    .container_items_footer a {
+        font-size: 90% !important;
+    }
+}
+
+footer p,
+.container_items_footer {
+    color: white;
+    font-weight: 500;
+    flex: 1;
+    font-size: 17px;
+    text-align: center;
+    margin: 0;
+}
+
+.container_items_footer a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    transition: opacity .2s ease-in-out;
+}
+
+.container_items_footer a:hover {
+    opacity: 70%;
+}
+
+footer .container_items_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --------------- Whatsapp Flutuante ------------------ */
+.container_whatsapp {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.781) 2px 2px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 27px 25px 25px 25px;
+    transition: background-color .1s ease-in;
+    z-index: 1000;
+}
+
+.container_whatsapp i {
+    color: #25d366;
+    font-size: 35px;
+    transition: color .2s ease-in-out;
+}
+
+.container_whatsapp:hover {
+    background-color: black;
+}
+
+.container_whatsapp:hover i {
+    color: white;
+}
